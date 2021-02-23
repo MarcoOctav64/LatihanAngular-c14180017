@@ -1,9 +1,15 @@
 <hello name="{{ name }}"></hello>
 <p>
-  </p>
-  Start editing to see some magic happen :)
-  <div *ngFor="let i of items">
-    <span *ngFor="let j of i">
+</p>
+Silhakan di isi
+<br>
+  Baris <input [(ngModel)] ="Baris" type="text" /> Kolom <input [(ngModel)]="Kolom" type ="text"/>
+
+<!-- {{arrays[Baris][Kolom]="1"}} -->
+<div *ngFor="let i of arrays">
+	<span *ngFor="let j of i">
         {{j}}
     </span>
 </div>
+<button (click)="proses()">Run</button>
+<button (click)="reset()">Reset</button>
